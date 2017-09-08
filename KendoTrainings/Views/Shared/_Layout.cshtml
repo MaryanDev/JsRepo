@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/css/kendo.default.min.css" rel="stylesheet" />
+    
+    @*<script src="~/Scripts/libs/jquery.min.js"></script>
+    <script src="~/Scripts/libs/kendo.all.min.js"></script>
+    <script src="~/Scripts/libs/kendo.aspnetmvc.min.js"></script>*@
+    
+    <script data-main="/Scripts/pages/home" src="~/Scripts/libs/require.js"></script>
+
+    @RenderSection("HeadScripts", false)
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
