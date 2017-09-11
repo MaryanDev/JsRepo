@@ -1,10 +1,8 @@
-﻿requirejs.config({
-    baseUrl: 'Scripts/libs'
-});
+﻿define(['jquery', 'kendo-all'],
+    function($, kendo) {
+        var _self = {};
 
-require(['jquery', 'kendo-all'],
-    function ($, kendo) {
-        $(function () {
+        _self.initialyze = function() {
             var animalsDataSource = new kendo.data.DataSource({
                 transport: {
                     read: {
@@ -20,32 +18,6 @@ require(['jquery', 'kendo-all'],
             });
 
             $("button").kendoButton();
-
-
-            //var fields = [
-            //{
-            //        name: "name",
-            //        type: "Full Name"
-            //},{
-            //    name: "yearsEmployed",
-            //    type: "Number",
-            //    min: 1,
-            //    max: 30,
-            //    decimals: 0
-            //}, {
-            //    name: "department",
-            //    type: "Custom List",
-            //    values: ["R+D", "Marketing", "HR"]
-            //}, {
-            //    name: "dob",
-            //    type: "Date",
-            //    min: "1/1/1950",
-            //    max: "1/1/2000",
-            //    format: "%m/%d/%Y"
-            //}];
-
-            //var url = 'https://api.mockaroo.com/api/generate.json?count=50&key=577f1980' +
-            //    '&fields=' + encodeURIComponent(JSON.stringify(fields));
 
             var gridDataSource = new kendo.data.DataSource({
                 type: "aspnetmvc-ajax",
@@ -100,5 +72,7 @@ require(['jquery', 'kendo-all'],
                 editable: true,
                 dataSource: gridDataSource
             });
-        });
+        }
+
+        return _self;
     });

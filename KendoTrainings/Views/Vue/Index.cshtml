@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeadScripts
+{
+    <script data-main="/Scripts/pages/vueMain" src="~/Scripts/libs/require.js"></script>
+}
+@Html.ActionLink("Kendo page", "Home", "Kendo");
+
+<h2>Vue trainings</h2>
+
+<div id="app">
+    {{ message }}
+</div>
+
+
+<div id="app-2">
+    <span v-bind:title="message">
+        Hover your mouse over me for a few seconds
+        to see my dynamically bound title!
+    </span>
+</div>
+
+<div id="app-3">
+    <p v-if="seen">Now you see me</p>
+    <button v-on:click="toggleVisibility">{{ seen ? "Hide message" : "Show message"}}</button>
+</div>
+
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo }}
+        </li>
+    </ol>
+</div>
+
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+
+<h3>Components</h3>
+<ol id="comp1">
+    <!-- Create an instance of the todo-item component -->
+    <todo-item v-for="item in groceryList"
+               v-bind:todo="item"
+               v-bind:key="item.id"></todo-item>
+</ol>

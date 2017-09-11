@@ -98,12 +98,18 @@
     <Content Include="Scripts\libs\kendo-all.js" />
     <Content Include="Scripts\libs\kendo.aspnetmvc.min.js" />
     <Content Include="Scripts\libs\require.js" />
-    <Content Include="Scripts\pages\home.js" />
+    <Content Include="Scripts\libs\vue.js" />
+    <Content Include="Scripts\pages\kendo-trainings\home.js" />
+    <Content Include="Scripts\pages\kendoMain.js" />
+    <Content Include="Scripts\pages\vue-trainings\home.js" />
+    <Content Include="Scripts\pages\vue-trainings\components.js" />
+    <Content Include="Scripts\pages\vueMain.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\KendoController.cs" />
+    <Compile Include="Controllers\VueController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -116,6 +122,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Kendo\Home.cshtml" />
     <Content Include="Data\gridData.json" />
+    <Content Include="Views\Vue\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

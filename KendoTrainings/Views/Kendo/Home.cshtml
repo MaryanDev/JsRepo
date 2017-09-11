@@ -4,8 +4,10 @@
 }
 
 @section HeadScripts{
-    @*<script src="~/Scripts/pages/home.js"></script>*@
+    <script data-main="/Scripts/pages/kendoMain" src="~/Scripts/libs/require.js"></script>
 }
+
+@Html.ActionLink("Vue page", "Index", "Vue");
 
 <p>Animal: <input id="animal"/></p> 
 
